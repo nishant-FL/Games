@@ -1,9 +1,9 @@
 # Rock, Papaer, Scissor
 
 import random
+print ("Lets Play Rock, Paper, Scissor")
 
 wins , loss , tie = 0 , 0 , 0
-
 values = ["r","p","s"]
 
 rps = dict([("r","ROCK"),("p","PAPER"),("s","SICSSOR")])
