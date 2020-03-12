@@ -1,0 +1,36 @@
+# Rock, Papaer, Scissor
+
+import random
+
+wins , loss , tie = 0 , 0 , 0
+
+values = ["r","p","s"]
+
+rps = dict([("r","ROCK"),("p","PAPER"),("s","SICSSOR")])
+
+while True:
+	
+	player = input('Enter your move:\n(r)ock (p)aper (s)cissors or (q)uit\n')
+	computer = random.choice(values)
+	 
+	if player == "q":
+		print("Good Bye")
+		break
+
+	elif (player,computer) == ('r', 'p') or ((player,computer) == ('p', 's')) or ((player,computer) == ('s', 'r')):
+		print(rps[player],"verses...",rps[computer])
+		print ("You Lose")
+		loss+= 1
+		print ("wins:", wins, "loss:",loss ,"tie:",tie,"\n")
+
+	elif((player,computer)== ('r', 's')) or ((player,computer) == ('p', 'r')) or ((player,computer) == ('s', 'p')):
+		print(rps[player],"verses...",rps[computer])
+		print("You Win")
+		wins += 1 
+		print ("wins:", wins, "loss:",loss ,"tie:",tie,"\n")
+
+	else:
+		print(rps[player],"verses...",rps[computer])
+		tie += 1
+		print("Its a Tie")
+		print ("wins:", wins, "loss:",loss ,"tie:",tie,"\n")
